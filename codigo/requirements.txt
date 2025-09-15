@@ -1,0 +1,58 @@
+# Dependencias principales para RAG con LangChain
+python-dotenv==1.0.1
+
+# LangChain core y community
+langchain
+
+langchain-community==0.2.10
+langchain-core==0.2.23
+
+# Para Google Gemini (que usas en tu código)
+langchain-google-genai==1.0.7
+google-generativeai==0.7.2
+
+# NUEVOS PAQUETES REQUERIDOS (sin warnings)
+langchain-huggingface==0.0.3  # Para embeddings sin warnings
+
+# Para embeddings de HuggingFace
+sentence-transformers==3.0.1
+transformers==4.42.4
+torch>=2.0.0
+
+# Para cargar PDFs
+pypdf2==3.0.1
+pymupdf==1.24.5  # Alternativa más robusta para PDFs
+pdfplumber==0.11.1  # Otra opción para PDFs complejos
+
+
+chromadb
+langchain-chroma==0.1.2 
+
+# Dependencias de sistema para ChromaDB (importantes!)
+onnxruntime==1.18.1  # Para Windows - usa esta versión
+# Para Mac usar: onnxruntime==1.18.1 también funciona
+
+# Para procesamiento de documentos
+unstructured==0.14.10
+unstructured[pdf]==0.14.10
+
+# Dependencias adicionales necesarias
+numpy>=1.24.0
+pandas>=2.0.0
+requests>=2.31.0
+tqdm>=4.65.0
+
+# Para manejo de archivos y paths (Windows)
+pathlib2>=2.3.7; sys_platform == "win32"
+
+# Dependencias opcionales pero recomendadas
+markdown==3.4.4  # Para documentos markdown
+beautifulsoup4==4.12.2  # Para HTML parsing
+lxml==4.9.3  # Para XML/HTML parsing más eficiente
+
+# Para logging y debugging
+colorlog==6.7.0
+
+# OpenAI (por si decide no usar gemini)
+openai
+tiktoken==0.7.0
